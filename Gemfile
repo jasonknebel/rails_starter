@@ -26,6 +26,8 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'rails_admin'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
