@@ -11,3 +11,4 @@
 /log/*.log
 /tmp
 notes.txt
+.env
