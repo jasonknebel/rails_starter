@@ -5,6 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- HTML5 shim and Respond.js IE8 support of media queries -->
+  <!--[if lt IE 9]>
+    <script src="<%= asset_path('js/css3-mediaqueries.js') %>" type="text/javascript"></script>
+  <![endif]-->
 </head>
 <body>
 
@@ -14,6 +19,12 @@
   <% end %>
   <%= yield %>
 </div>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="<%= asset_path('js/html5shiv.js') %>" type="text/javascript"></script>
+  <script src="<%= asset_path('js/respond.min.js') %>" type="text/javascript"></script>
+<![endif]-->
 
 </body>
 </html>

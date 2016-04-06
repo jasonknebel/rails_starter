@@ -1,3 +1,0 @@
-IE compatibility in home layout
-CanCanCan
-Papertrail
