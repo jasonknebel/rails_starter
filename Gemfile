@@ -11,29 +11,38 @@ gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'turbolinks'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 gem 'devise'
-
 gem 'rails_admin'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development do
+  gem 'rack-livereload'
+  gem 'guard-livereload', require: false
+  gem 'bullet' # help to kill N+1 queries and unused eager loading
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+  # debugging
+  gem 'pry-rails'
+  gem 'rack-mini-profiler'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+  # for notifications
+  gem 'growl'
+  gem 'ruby_gntp'
+
+  # security checks
+  gem 'brakeman', require: false
+  gem 'guard-brakeman'
+
+  gem 'rails-erd', require: false # entity-relationship diagrams
+end
+
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'letter_opener' # open emails in browser
+end
