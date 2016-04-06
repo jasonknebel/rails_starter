@@ -19,6 +19,7 @@ gem 'turbolinks'
 gem 'devise'
 gem 'cancancan', '~> 1.1'
 gem 'rails_admin'
+gem 'exception_notification'
 
 group :development do
   gem 'rack-livereload'

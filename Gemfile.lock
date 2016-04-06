@@ -92,6 +92,9 @@ GEM
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     eventmachine (1.2.0.1)
+    exception_notification (4.1.4)
+      actionmailer (~> 4.0)
+      activesupport (~> 4.0)
     execjs (2.6.0)
     ffi (1.9.10)
     font-awesome-rails (4.5.0.1)
@@ -303,6 +306,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0)
   devise
   dotenv-rails
+  exception_notification
   growl
   guard-brakeman
   guard-livereload
