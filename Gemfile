@@ -17,6 +17,7 @@ gem 'turbolinks'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'devise'
+gem 'cancancan', '~> 1.1'
 gem 'rails_admin'
 
 group :development do
