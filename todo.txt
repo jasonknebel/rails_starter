@@ -1,1 +1,3 @@
-Add production mailer
+IE compatibility in home layout
+CanCanCan
+Papertrail
