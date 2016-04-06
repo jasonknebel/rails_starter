@@ -20,6 +20,7 @@ gem 'devise'
 gem 'cancancan', '~> 1.1'
 gem 'rails_admin'
 gem 'exception_notification'
+gem 'whenever', require: false
 
 group :development do
   gem 'rack-livereload'
