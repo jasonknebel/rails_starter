@@ -17,6 +17,8 @@
 
 <div class='container'>
   <% flash.each do |type, msg| %>
+    <% type = 'success' if type == 'notice' %>
+    <% type = 'danger' if type == 'alert' %>
     <%=h content_tag :div, msg, class: "alert alert-#{type}" %>
   <% end %>
   <%= yield %>
