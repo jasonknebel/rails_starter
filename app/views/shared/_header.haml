@@ -6,16 +6,19 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
+      = link_to 'Rails Starter', root_path, class: 'navbar-brand'
     .collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        - if user_signed_in?
+      - if user_signed_in?
+        %ul.nav.navbar-nav
           %li= link_to "Home", root_path
+        %ul.nav.navbar-nav.navbar-right
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
               %strong= current_user.email
               %b.caret
             %ul.dropdown-menu
               %li= link_to "Logout", destroy_user_session_path, method: :delete
-        - else
+      - else
+        %ul.nav.navbar-nav.navbar-right
           %li= link_to "Sign up", new_user_registration_path
           %li= link_to "Login", new_user_session_path
